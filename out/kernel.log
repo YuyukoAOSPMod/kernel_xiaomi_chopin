@@ -1,0 +1,33 @@
+make[1]: 进入目录“/home/maribel/kernel_xiaomi_chopin/out”
+arch/arm64/Makefile:57: Detected assembler with broken .inst; disassembly will be unreliable
+  GEN     ./Makefile
+scripts/kconfig/conf  --silentoldconfig Kconfig
+arch/arm64/Makefile:57: Detected assembler with broken .inst; disassembly will be unreliable
+  CHK     include/config/kernel.release
+  Using .. as source for kernel
+  GEN     ./Makefile
+  CHK     include/generated/uapi/linux/version.h
+  CHK     include/generated/utsrelease.h
+  CC      kernel/bounds.s
+  CHK     include/generated/bounds.h
+  CHK     include/generated/timeconst.h
+  CC      arch/arm64/kernel/asm-offsets.s
+In file included from ../arch/arm64/kernel/asm-offsets.c:24:
+In file included from ../include/linux/kvm_host.h:38:
+In file included from ../arch/arm64/include/asm/kvm_host.h:39:
+In file included from ../include/kvm/arm_pmu.h:21:
+In file included from ../include/linux/perf_event.h:56:
+In file included from ../include/linux/cgroup.h:27:
+../include/linux/cgroup-defs.h:404:16: warning: field 'cgrp' with variable sized type 'struct cgroup' not at the end of a struct or class is a GNU extension [-Wgnu-variable-sized-type-not-at-end]
+        struct cgroup cgrp;
+                      ^
+1 warning generated.
+  CHK     include/generated/asm-offsets.h
+  CALL    ../scripts/checksyscalls.sh
+  VDSOA   arch/arm64/kernel/vdso/gettimeofday.o
+/usr/bin/as：未识别的选项 ‘-EL’
+clang-12: error: assembler command failed with exit code 1 (use -v to see invocation)
+make[2]: *** [../arch/arm64/kernel/vdso/Makefile:52：arch/arm64/kernel/vdso/gettimeofday.o] 错误 1
+make[1]: *** [arch/arm64/Makefile:223：vdso_prepare] 错误 2
+make[1]: 离开目录“/home/maribel/kernel_xiaomi_chopin/out”
+make: *** [Makefile:146：sub-make] 错误 2
