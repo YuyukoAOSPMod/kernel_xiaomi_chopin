@@ -1,3 +1,9 @@
+!!!!!WARNING!!!!!
+==============================
+THIS KERNEL'S ORIGINAL BRANCH IS chopin-r-oss , CANNOT DIRECTLY BUILD FOR AOSP 12.1 !!!!
+THIS CODE IS ONLY USE FOR GENERATE KERNEL HEADER
+
+
 Linux kernel
 ============
 
